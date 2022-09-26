@@ -4,7 +4,6 @@ package com.myproject.Model;
 
 public class Line {
     
-  
     private String item;
     private double price;
     private int count;
@@ -15,10 +14,7 @@ public class Line {
     public Invoice getInvoice() {
         return invoice;
     }
-    
-    
-
-    
+   
 
     public Line( String item, double price, int count, Invoice invoice) {
  
@@ -32,10 +28,7 @@ public class Line {
     public String toString() {
         return "invoiceLine{" + "num=" + invoice.getInvoicenum()+ ", item=" + item + ", price=" + price + ", count=" + count + '}';
     }
-
- 
- 
-
+    
     public int getCount() {
         return count;
     }
@@ -65,6 +58,10 @@ public class Line {
      public double getTotalLine()
     {
      return price * count ;
+    }
+     
+      public String getASCSV() {
+        return invoice.getInvoicenum()+ ","  + item+ "," +price + "," +count ;
     }
     
 }

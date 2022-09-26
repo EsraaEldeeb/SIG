@@ -73,4 +73,7 @@ public class Invoice {
     }
     
     
+ public String getASCSV() {
+        return invoicenum + ","  + date+ "," + customer;
+    }
 }
